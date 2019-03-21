@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+</head>
+<body>
+<!-- Navbar will go here -->
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-text">
+        <h1>Crystal Collector</h1>
+    </span>
+</nav>
+
+<!-- Navbar end -->
+
+
+
+<!-- Begin Row1: this row contains Instructions card and two subrows: "Your Goal" card and "Your Score" card -->
+<div class="container">
+    <div class="row" id="instructions">
+        <div class="col-md-12"><br></div>
+    </div>
+        <div class="row">
+        <div class="col-md-6 text" id="textbox">
+            <!--Insert instructions card here-->
+            <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet. </p>
+        
+        </div>
+        <div class="col-md-6">
+                <div class="col-md-5 sub-row-box">
+                        <!--Goal card and score card subrows here-->
+                        <div class="row sub-row">
+                            <div class="col-md-12" id="goalcard">
+                            <!--Insert "Your Goal" card here-->
+                            <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      <a href="#" class="card-link">Card link</a>
+                                      <a href="#" class="card-link">Another link</a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row sub-row">
+                            <div class="col-md-12" id="scorecard">
+                            <!--Insert "Your Score" card here-->
+                            <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      <a href="#" class="card-link">Card link</a>
+                                      <a href="#" class="card-link">Another link</a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+<!-- End of Row1 -->
+
+
+
+<!-- Begin Row2: this row displays all of the cyrstals -->
+
+<div class="row" id="crystals">
+    <div class="col-md-3" id="blue-crystal">
+        <!--Insert crystal pic here with "img" tags-->
+        <img src="assets/images/BlueCrystal.png" id="blue" alt="Blue Crystal"> 
+    </div>
+    <div class="col-md-3" id="pink-crystal">
+        <!--Insert crystal pic here with "img" tags-->
+        <img src="assets/images/PinkCrystal.png" id="pink" alt="Pink Crystal">
+    </div>
+    <div class="col-md-3" id="purple-cyrstal">
+        <!--Insert crystal pic here with "img" tags-->
+        <img src="assets/images/PurpleCrystal.png" id="purple" alt="Purple Crystal">
+    </div>
+    <div class="col-md-3" id="orange-crystal">
+        <!--Insert crystal pic here with "img" tags-->
+        <img src="assets/images/OrangeCrystal.png" id="orange" alt="Orange Crystal">
+    </div>
+</div>
+
+<!-- End Row2 -->
+
+<!-- Begin Row3: this row displays total wins/losses in separate cards -->
+
+<div class="row" id="wins-loss">
+    <div class="col-md-5" id="win-card">
+        <!--Insert win card-->
+        <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5" id="loss-card">
+        <!--Insert loss card-->
+        <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+    </div>
+</div>
+
+<!-- End Row3 -->
+    
+</body>
+<script src="assets/javascript/game.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- The player will be shown a random number at the start of the game.
+
+When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+
+
+Your game will hide this amount until the player clicks a crystal.
+When they do click one, update the player's score counter.
+
+
+The player wins if their total score matches the random number from the beginning of the game.
+The player loses if their score goes above the random number.
+
+The game restarts whenever the player wins or loses.
+
+
+When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+
+
+The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+
+
+
+Option 1 Game design notes
+
+
+The random number shown at the start of the game should be between 19 - 120.
+Each crystal should have a random hidden value between 1 - 12.  -->
