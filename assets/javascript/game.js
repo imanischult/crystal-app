@@ -1,8 +1,22 @@
 // There will be four crystals displayed as buttons on the page.
 
-console.log("test");
 
 // The player will be shown a random number at the start of the game.
+// 1. Create a variable that chooses a random number between 1-12 for each cyrstals. 
+
+var blueCrystalNumber = Math.floor(Math.random() * 10) + 2;
+var pinkrystalNumber = Math.floor(Math.random() * 10) + 2;
+var purpleCrystalNumber = Math.floor(Math.random() * 10) + 2;
+var orangeCrystalNumber = Math.floor(Math.random() * 10) + 2;
+
+// Write global variables. 
+
+var winScore = 0;
+var lossScore = 0;
+
+// Write DOM variables. 
+
+
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 
