@@ -1,41 +1,148 @@
-// There will be four crystals displayed as buttons on the page.
+// Create a variable that chooses a random number between 1-12 for each cyrstals. 
 
+// This generates a random number for the crystals (between 1 and 12)
+// Math.round helps create a more random variable 
+var blueCrystalNumber = Math.round(Math.random() * 10) + 2;
+var pinkCrystalNumber = Math.round(Math.random() * 10) + 2;
+var purpleCrystalNumber = Math.round(Math.random() * 10) + 2;
+var orangeCrystalNumber = Math.round(Math.random() * 10) + 2;
 
-// The player will be shown a random number at the start of the game.
-// 1. Create a variable that chooses a random number between 1-12 for each cyrstals. 
+console.log(blueCrystalNumber);
 
-var blueCrystalNumber = Math.floor(Math.random() * 10) + 2;
-var pinkrystalNumber = Math.floor(Math.random() * 10) + 2;
-var purpleCrystalNumber = Math.floor(Math.random() * 10) + 2;
-var orangeCrystalNumber = Math.floor(Math.random() * 10) + 2;
+// This generates a random number for the goal (between 19 and 120)
+var randomGoalNumber = Math.round(Math.random () * 101) + 19
+
+console.log(randomGoalNumber); //it works!//
+
 
 // Write global variables. 
 
 var winScore = 0;
 var lossScore = 0;
+var totalWins = 0
+var totalLosses = 0;
+var score = 0;
 
-// Write DOM variables. 
+// Reference DOM elements 
 
-
-
-// When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-
-
-// Your game will hide this amount until the player clicks a crystal.
-// When they do click one, update the player's score counter.
-
-
-// The player wins if their total score matches the random number from the beginning of the game.
-// The player loses if their score goes above the random number.
-
-// The game restarts whenever the player wins or loses.
+$("#goalnumber").text(randomGoalNumber);
+$('#scorenumber').text(score);
+$('#wins-number').text(totalWins);
+$('#losses-number').text(totalLosses);
 
 
-// When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+// This resets the random values whenever the function is ran
+
+var newGame = function() {
+    score = 0;
+    randomGoalNumber = Math.round(Math.random () * 101) + 19;
+    blueCrystalNumber = Math.round(Math.random() * 10) + 2;
+    pinkCrystalNumber = Math.round(Math.random() * 10) + 2;
+    purpleCrystalNumber = Math.round(Math.random() * 10) + 2;
+    orangeCrystalNumber = Math.round(Math.random() * 10) + 2;
+    $("#goalnumber").text(randomGoalNumber);
+    $('#scorenumber').text(score);
+}
 
 
-// The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
-// Create a function that resets stats whenever win conditions are met
+// ************** GAME LOGIC BEGINS HERE ************** //
 
-// The random number shown at the start of the game should be between 19 - 120.
-// Each crystal should have a random hidden value between 1 - 12. 
+
+
+// Allow the page some time to load fully
+$(document).ready(function(){
+
+// If the score is less than the goal number
+if (score < randomGoalNumber) {
+        $('#blue').click(function() {
+            score += blueCrystalNumber;
+            $('#scorenumber').text(score); 
+
+            console.log(score);
+
+            // If the player loses, alert the user that s/he lost, increase loss score by 1, and run the newGame function
+            if (score > randomGoalNumber) {
+                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                lossScore++;
+                $('#losses-number').text(lossScore);
+                newGame();
+
+
+            // If the player wins, alert the user that s/he won, increase win score by 1, and run the newGame function
+            } else if (score === randomGoalNumber) {
+                alert (`Nice job!`);
+                winScore++;
+                $('#wins-number').text(winScore);
+                newGame();
+            }
+   
+        })
+
+        // Repeat for all other crystal buttons
+
+        $('#pink').click(function() {
+            score += pinkCrystalNumber; 
+            $('#scorenumber').text(score); 
+
+            console.log(score);
+
+            if (score > randomGoalNumber) {
+                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                lossScore++;
+                $('#losses-number').text(lossScore);
+                newGame();
+
+            } else if (score === randomGoalNumber) {
+                alert (`Nice job!`);
+                winScore++;
+                $('#wins-number').text(winScore);
+                newGame();
+            }
+        })
+    
+        $('#purple').click(function() {
+            score += purpleCrystalNumber;
+            $('#scorenumber').text(score); 
+
+            console.log(score);
+
+            if (score > randomGoalNumber) {
+                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                lossScore++;
+                $('#losses-number').text(lossScore);
+                newGame();
+
+            } else if (score === randomGoalNumber) {
+                alert (`Nice job!`);
+                winScore++;
+                $('#wins-number').text(winScore);
+                newGame();
+            }
+        })
+
+        $('#orange').click(function() {
+            score += orangeCrystalNumber;
+            $('#scorenumber').text(score); 
+
+            console.log(score);
+
+            if (score > randomGoalNumber) {
+                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                lossScore++;
+                $('#losses-number').text(lossScore);
+                newGame();
+                
+            } else if (score == randomGoalNumber) {
+                alert (`Nice job!`);
+                winScore++;
+                $('#wins-number').text(winScore);
+                newGame();
+            }
+        })
+    
+
+    }
+
+})
+
+

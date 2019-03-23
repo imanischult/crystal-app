@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    
 </head>
 <body>
 <!-- Navbar will go here -->
@@ -40,7 +45,7 @@
                             <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                       <h5 class="card-title text">YOUR GOAL:</h5>
-                                      <p class="card-text text"><span id="goal-number"></span></p>
+                                      <p class="card-text text"><span id="goalnumber"></span></p>
                                     </div>
                                   </div>
                             </div>
@@ -51,7 +56,7 @@
                             <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                       <h5 class="card-title text">YOUR SCORE:</h5>
-                                      <p class="card-text text"><span id="score-number"></span></p>
+                                      <p class="card-text text"><span id="scorenumber"></span></p>
                                     </div>
                                   </div>
                             </div>
@@ -69,19 +74,19 @@
 <div class="row" id="crystals">
     <div class="col-md-3" id="blue-crystal">
         <!--Insert crystal pic here with "img" tags-->
-        <img src="assets/images/BlueCrystal.png" id="blue" alt="Blue Crystal"> 
+        <button class='button' id="blue"><img src="assets/images/BlueCrystal.png" alt="Blue Crystal"></button> 
     </div>
     <div class="col-md-3" id="pink-crystal">
         <!--Insert crystal pic here with "img" tags-->
-        <img src="assets/images/PinkCrystal.png" id="pink" alt="Pink Crystal">
+        <button class='button' id='pink'><img src="assets/images/PinkCrystal.png" alt="Pink Crystal"></button>
     </div>
     <div class="col-md-3" id="purple-cyrstal">
         <!--Insert crystal pic here with "img" tags-->
-        <img src="assets/images/PurpleCrystal.png" id="purple" alt="Purple Crystal">
+        <button class='button' id="purple"><img src="assets/images/PurpleCrystal.png" alt="Purple Crystal"></button>
     </div>
     <div class="col-md-3" id="orange-crystal">
         <!--Insert crystal pic here with "img" tags-->
-        <img src="assets/images/OrangeCrystal.png" id="orange" alt="Orange Crystal">
+        <button class='button' id='orange'><img src="assets/images/OrangeCrystal.png" alt="Orange Crystal"></button>
     </div>
 </div>
 
@@ -115,7 +120,7 @@
 <!-- End Row3 -->
     
 </body>
-<script src="assets/javascript/game.js"></script>
+<script src="assets/javascript/game.js "></script>
 </html>
 
 
