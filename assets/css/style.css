@@ -8,6 +8,7 @@ body {
     background: #cccccc;
     border-radius: 25px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 text {
@@ -21,16 +22,19 @@ text {
 
 .card-text {
     padding: 20px;
+    text-align: center;
 }
 
 button {
     margin-left: 35px;
 }
 
-.text {
+
+h1 {
     text-align: center;
+    margin-left: 450px;
 }
 
-.nav-bar text {
-    text-align: center;
+.number {
+    font-size: 70px;
 }
