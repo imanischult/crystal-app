@@ -17,7 +17,7 @@
 <!-- Navbar will go here -->
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-text">
-        <h1>Crystal Collector</h1>
+        <h1 class='text'>Crystal Collector</h1>
     </span>
 </nav>
 
@@ -31,9 +31,20 @@
         <div class="col-md-12"><br></div>
     </div>
         <div class="row">
-        <div class="col-md-6 text" id="textbox">
+        <div class="col-md-6" id="textbox">
             <!--Insert instructions card here-->
-            <p class="text-justify text">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet. </p>
+            <h2 class="text">Welcome to the Crystal Collector Game!</h2>
+            <p class="text-justify text"> <br>
+                The purpose of this game is to try and match your score with the goal number. You can increase your score by clicking on the crystal buttons below.
+                <br><br><br>
+                But here's the catch: 
+                <br><br>
+                Each crystal holds a random value, and each time you click a button, that value is added to your score.
+                <br><br><br>
+                You've got this! Give it a try!
+                <br><br>
+
+            </p>
         
         </div>
         <div class="col-md-6">
@@ -45,7 +56,7 @@
                             <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                       <h5 class="card-title text">YOUR GOAL:</h5>
-                                      <p class="card-text text"><span id="goalnumber"></span></p>
+                                      <p class="card-text"><span class='text number' id="goalnumber"></span></p>
                                     </div>
                                   </div>
                             </div>
@@ -56,7 +67,7 @@
                             <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                       <h5 class="card-title text">YOUR SCORE:</h5>
-                                      <p class="card-text text"><span id="scorenumber"></span></p>
+                                      <p class="card-text"><span class='text number' id="scorenumber"></span></p>
                                     </div>
                                   </div>
                             </div>
@@ -101,7 +112,7 @@
                 <div class="card-body">
                   <h5 class="card-title text">TOTAL WINS:</h5>
    
-                  <p class="card-text text"><span id="wins-number"></span></p>
+                  <p class="card-text text"><span class='text' id="wins-number"></span></p>
                 </div>
               </div>
     </div>
@@ -111,7 +122,7 @@
         <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title text">TOTAL LOSSES:</h5>
-                  <p class="card-text text"><span id="losses-number"></span></p>
+                  <p class="card-text"><span class ='text' id="losses-number"></span></p>
                 </div>
               </div>
     </div>
@@ -153,9 +164,3 @@ When the game begins again, the player should see a new random number. Also, all
 The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
 
 
-
-Option 1 Game design notes
-
-
-The random number shown at the start of the game should be between 19 - 120.
-Each crystal should have a random hidden value between 1 - 12.  -->

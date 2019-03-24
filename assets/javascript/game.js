@@ -62,7 +62,7 @@ if (score < randomGoalNumber) {
 
             // If the player loses, alert the user that s/he lost, increase loss score by 1, and run the newGame function
             if (score > randomGoalNumber) {
-                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                alert (`Hmm...not quite. Let's try again.`);
                 lossScore++;
                 $('#losses-number').text(lossScore);
                 newGame();
@@ -87,13 +87,13 @@ if (score < randomGoalNumber) {
             console.log(score);
 
             if (score > randomGoalNumber) {
-                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                alert (`You've got this. Try again!`);
                 lossScore++;
                 $('#losses-number').text(lossScore);
                 newGame();
 
             } else if (score === randomGoalNumber) {
-                alert (`Nice job!`);
+                alert (`You won!`);
                 winScore++;
                 $('#wins-number').text(winScore);
                 newGame();
@@ -113,7 +113,7 @@ if (score < randomGoalNumber) {
                 newGame();
 
             } else if (score === randomGoalNumber) {
-                alert (`Nice job!`);
+                alert (`I see that brain workin'! You win!`);
                 winScore++;
                 $('#wins-number').text(winScore);
                 newGame();
@@ -127,13 +127,13 @@ if (score < randomGoalNumber) {
             console.log(score);
 
             if (score > randomGoalNumber) {
-                alert (`Uh oh. Ya lost buddy! Let's try again!`);
+                alert (`You.....lost. Close though!`);
                 lossScore++;
                 $('#losses-number').text(lossScore);
                 newGame();
                 
             } else if (score == randomGoalNumber) {
-                alert (`Nice job!`);
+                alert (`That choice was lit! You win!`);
                 winScore++;
                 $('#wins-number').text(winScore);
                 newGame();

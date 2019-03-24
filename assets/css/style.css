@@ -1,0 +1,36 @@
+body {
+    background-image: url("../images/prism.png");
+    background-color: #cccccc;
+    background-repeat: repeat;
+}
+
+#textbox {
+    background: #cccccc;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+text {
+    font-family: 'Sniglet', cursive;
+}
+
+.card {
+    margin: 0px 0px 30px 100px;
+  
+}
+
+.card-text {
+    padding: 20px;
+}
+
+button {
+    margin-left: 35px;
+}
+
+.text {
+    text-align: center;
+}
+
+.nav-bar text {
+    text-align: center;
+}
