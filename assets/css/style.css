@@ -17,7 +17,6 @@ text {
 
 .card {
     margin: 0px 0px 30px 100px;
-  
 }
 
 .card-text {
@@ -29,12 +28,8 @@ button {
     margin-left: 35px;
 }
 
-
-h1 {
-    text-align: center;
-    margin-left: 450px;
-}
-
 .number {
     font-size: 70px;
 }
+
+
