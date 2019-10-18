@@ -87,7 +87,7 @@ if (score < randomGoalNumber) {
             console.log(score);
 
             if (score > randomGoalNumber) {
-                alert (`You've got this. Try again!`);
+                alert (`You can do this. Try again!`);
                 lossScore++;
                 $('#losses-number').text(lossScore);
                 newGame();
