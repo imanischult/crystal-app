@@ -62,6 +62,7 @@ if (score < randomGoalNumber) {
 
             // If the player loses, alert the user that s/he lost, increase loss score by 1, and run the newGame function
             if (score > randomGoalNumber) {
+                score += blueCrystalNumber
                 alert (`Hmm...not quite. Let's try again.`);
                 lossScore++;
                 $('#losses-number').text(lossScore);
